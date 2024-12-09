@@ -1,2 +1,2 @@
 # Movie Project API
-by: John Christian Diamante
+by: Paula Gonzales
