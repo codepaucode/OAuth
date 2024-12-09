@@ -15,30 +15,35 @@ import java.util.*;
 @RestController
 public class MovieController {
 
+    private final MovieService movieService;
+    private final GenreService genreService;
+    private final MovieRepository movieRepository;
+
     @Autowired
-    MovieService movieService;
-    GenreService genreService;
-    MovieRepository movieRepository;
+    public MovieController(MovieService movieService, GenreService genreService, MovieRepository movieRepository) {
+        this.movieService = movieService;
+        this.genreService = genreService;
+        this.movieRepository = movieRepository;
+    }
 
     // Root / Index endpoint, contains all of the possible endpoints that can be accessed with the API.
     @GetMapping("/")
     public Map<String, String> indexMovie() {
         HashMap<String, String> map = new HashMap<>();
         map.put("/movies", "Returns all movies in the database in JSON format");
-        map.put("/getMoviesByYear/{yearReleased}", "Returns movies in the database filtered by their year released  in JSON format");
+        map.put("/getMoviesByYear/{yearReleased}", "Returns movies in the database filtered by their year released in JSON format");
         map.put("/getAllMoviesOrderByYearReleased", "Returns all movies in the database sorted in ascending order in JSON format");
         map.put("/getMoviesByGenreAndNotIsSequel/{genres}&{isSequel}", "Returns movies in the database based on their genre and if they have a sequel in JSON format");
         return map;
     }
 
     @GetMapping("/movies")
-    public List<Movie> getAllMovies(){
+    public List<Movie> getAllMovies() {
         return movieService.getAllMovies();
     }
 
-//    /getMoviesByYear/{i}
     @GetMapping("/getMoviesByYear/{yearReleased}")
-    public List<Movie> getMoviesByYear(@PathVariable("yearReleased") Integer yearReleased){
+    public List<Movie> getMoviesByYear(@PathVariable("yearReleased") Integer yearReleased) {
         return movieService.getMoviesByYear(yearReleased);
     }
 
@@ -62,5 +67,4 @@ public class MovieController {
             default -> throw new IllegalArgumentException("Invalid genre ID: " + genreId);
         };
     }
-
 }
