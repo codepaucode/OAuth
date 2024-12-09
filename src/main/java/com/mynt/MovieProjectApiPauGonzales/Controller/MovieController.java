@@ -1,18 +1,16 @@
-package com.mynt.MovieProjectApiJCDiamante.Controller;
+package com.mynt.MovieProjectApiPauGonzales.Controller;
 
-import com.mynt.MovieProjectApiJCDiamante.Enum.Genre;
-import com.mynt.MovieProjectApiJCDiamante.Model.Movie;
-import com.mynt.MovieProjectApiJCDiamante.Repository.GenreRepository;
-import com.mynt.MovieProjectApiJCDiamante.Repository.MovieRepository;
-import com.mynt.MovieProjectApiJCDiamante.Service.GenreService;
-import com.mynt.MovieProjectApiJCDiamante.Service.MovieService;
+import com.mynt.MovieProjectApiPauGonzales.Enum.Genre;
+import com.mynt.MovieProjectApiPauGonzales.Model.Movie;
+import com.mynt.MovieProjectApiPauGonzales.Repository.MovieRepository;
+import com.mynt.MovieProjectApiPauGonzales.Service.GenreService;
+import com.mynt.MovieProjectApiPauGonzales.Service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @RestController
 public class MovieController {

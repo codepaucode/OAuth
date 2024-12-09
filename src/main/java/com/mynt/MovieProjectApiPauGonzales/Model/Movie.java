@@ -1,4 +1,4 @@
-package com.mynt.MovieProjectApiJCDiamante.Model;
+package com.mynt.MovieProjectApiPauGonzales.Model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

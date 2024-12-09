@@ -1,4 +1,4 @@
-package com.mynt.MovieProjectApiJCDiamante;
+package com.mynt.MovieProjectApiPauGonzales;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.security.config.annotation.authentication.configurati
 
 @EnableGlobalAuthentication
 @SpringBootApplication
-public class MovieProjectApiJcDiamanteApplication {
+public class MovieProjectApiPauGonzalesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MovieProjectApiJcDiamanteApplication.class, args);
+		SpringApplication.run(MovieProjectApiPauGonzalesApplication.class, args);
 	}
 
 }

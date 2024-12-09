@@ -1,6 +1,4 @@
-package com.mynt.MovieProjectApiJCDiamante.service;
-
-import org.junit.jupiter.api.Test;
+package com.mynt.MovieProjectApiPauGonzales.service;
 
 public class MovieServiceImplTest {
 

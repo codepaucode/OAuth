@@ -1,9 +1,7 @@
-package com.mynt.MovieProjectApiJCDiamante.Service;
+package com.mynt.MovieProjectApiPauGonzales.Service;
 
 
-import com.mynt.MovieProjectApiJCDiamante.Model.Genre;
-
-import java.util.List;
+import com.mynt.MovieProjectApiPauGonzales.Model.Genre;
 
 public interface GenreService {
 //    List<Genre> getAllGenres();

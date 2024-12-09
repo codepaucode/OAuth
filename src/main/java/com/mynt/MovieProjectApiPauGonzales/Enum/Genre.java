@@ -1,4 +1,4 @@
-package com.mynt.MovieProjectApiJCDiamante.Enum;
+package com.mynt.MovieProjectApiPauGonzales.Enum;
 
 public enum Genre {
     ACTION,
